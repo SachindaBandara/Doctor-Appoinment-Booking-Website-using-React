@@ -12,8 +12,8 @@ const SpecialityMenu = () => {
     {/* Fetch data from the specialityData array */}
 
 {specialityData.map((item,index)=>(
-    <Link to={`/doctor/${item.speciality}`}>
-    <img src={item.image} alt="" />
+    <Link className='flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500' to={`/doctor/${item.speciality}`}>
+    <img className='w-16 sm:w-24 mb-2' src={item.image} alt="" />
     <p>{item.speciality}</p>
     </Link>
 ))}
