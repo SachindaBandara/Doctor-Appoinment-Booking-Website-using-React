@@ -52,16 +52,16 @@ const NavBar = () => {
 
         <img onClick={()=>setShowMenu(true)} className='w-6 md:hidden' src={assets.menu_icon} alt="" />
         {/* Mobile menu */}
-        <div>
-          <div>
-            <img src={assets.logo} alt="" />
-            <img onClick={()=>setShowMenu(false)} src={assets.cross_icon} alt="" />
+        <div className={`${showMenu ? 'fixed w-full' : 'h-0 w-0'}md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
+          <div className='flex items-center justify-between px-5 py-6'>
+            <img className='w-36' src={assets.logo} alt="" />
+            <img className='w-7' onClick={()=>setShowMenu(false)} src={assets.cross_icon} alt="" />
           </div>
-          <ul>
-            <NavLink>Home</NavLink>
-            <NavLink>Doctors</NavLink>
-            <NavLink>About</NavLink>
-            <NavLink>Contact</NavLink>
+          <ul className='flex flex-col items-center gap-4 mt-5 px-5 text-lg font-medium'>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/doctors'>Doctors</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/contact'>Contact</NavLink>
           </ul>
         </div>
        
