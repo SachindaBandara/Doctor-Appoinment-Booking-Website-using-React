@@ -1,18 +1,18 @@
 import { createContext } from "react";
 import { doctors } from "../assets/assets";
 
-export const AppContext = createContext();
+export const AppContext = createContext()
 
-const AppContextProvider = () => {
+const AppContextProvider = (props) => {
 
     const value = {
         doctors
     }
 
     return (
-        <AppContextProvider value = {value}>
+        <AppContext.Provider value = {value}>
             {props.children}
-        </AppContextProvider>
+        </AppContext.Provider>
     )
 }
 
