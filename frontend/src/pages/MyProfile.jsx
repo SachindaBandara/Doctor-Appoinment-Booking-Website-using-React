@@ -39,7 +39,8 @@ const MyProfile = () => {
     <p>Email Id :</p>
     <p>{userData.email}</p>
     <p>Phone</p>
-    {isEdit ? (
+    {
+    isEdit ? (
         <input
           type="text"
           value={userData.phone}
@@ -49,14 +50,15 @@ const MyProfile = () => {
         />
       ) : (
         <p>{userData.phone}</p>
-      )}
+      )
+      }
       <p>Address :</p>
       {
         isEdit
         ? <p>
-          <input onChange={} type="text" />
+          <input onChange={(e) => setUserData(prev => ({...prev, address: {...prev.address, line1: e.target.value }}))} value={userData.address.line1} type="text" />
           <br/>
-          <input type="text" />
+          <input  onChange={(e) => setUserData(prev => ({...prev, address: {...prev.address, line2: e.target.value }}))} value={userData.address.line2} type="text" />
         </p>
         : <p>
           {userData.address.line1}
@@ -66,7 +68,20 @@ const MyProfile = () => {
       }
   </div>
 </div>
-
+<div>
+  <p>Basic Information</p>
+  <div>
+    <p>Gender : </p>
+    {isEdit ? 
+    <select onChange={(e) => setUserData(prev => ({...prev, gender:e.target.value}))} value={userData.gender}>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    : (
+        <p>{userData.gender}</p>
+      )}
+  </div>
+</div>
     </div>
   );
 };
