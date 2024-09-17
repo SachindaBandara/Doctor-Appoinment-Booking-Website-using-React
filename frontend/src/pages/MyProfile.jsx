@@ -80,7 +80,22 @@ const MyProfile = () => {
     : (
         <p>{userData.gender}</p>
       )}
+
+      <p>Birthday :</p>
+      {
+        isEdit 
+        ? <input type="date" onChange={(e) => setUserData(prev => ({...prev, dob:e.target.value}))} value={userData.dob}/>
+        : <p>{userData.dob}</p>
+      }
   </div>
+</div>
+
+<div>
+  {
+  isEdit
+  ? <button onClick={()=>setIsEdit(false)}>Save Information</button>
+  : <button onClick={()=>setIsEdit(true)}>Edit</button>
+  }
 </div>
     </div>
   );
