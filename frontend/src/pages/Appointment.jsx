@@ -7,16 +7,78 @@ const Appointment = () => {
 
   const { docId } = useParams();
   const {doctors, currencySymbol} = useContext(AppContext);
+
+  const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const [docInfo, setDocInfo] = useState(null);
+
+  const [docSlots, setDocSlots] = useState([])
+  const [slotIndex, setSlotIndex] = useState(0)
+  const [slotTime, setSlotTime] = useState('')
 
   const fetchDocInfo = async () => {
     const docInfo = doctors.find(doc => doc._id === docId);
     setDocInfo(docInfo);
   }
 
+  const getAvailableSolts = async () => {
+setDocSlots([])
+ 
+// getting current date
+let today = new Date()
+
+for(let i = 0; i < 7; i++){
+// Getting date with index
+
+let currentDate = new Date(today)
+currentDate.setDate(today.getDate() + i)
+
+//setting time of the day with index
+
+let  endTime = new Date()
+endTime.setDate(today.getDate() + i)
+endTime.setHours(21,0,0,0)
+
+// setting hours
+
+
+if (today.getDate() === currentDate.getDate()){
+  currentDate.setHours(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10)
+  currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0)
+} else {
+  currentDate.setHours(10)
+  currentDate.setMinutes(0)
+}
+
+let timeSlots = []
+
+while(currentDate < endTime){
+  let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})
+
+  // add slots to array
+timeSlots.push({
+  datetime: new Date(currentDate),
+  time: formattedTime
+})
+
+// Increment current time by 30 min
+currentDate.setMinutes(currentDate.getMinutes() + 30)
+}
+
+setDocSlots(prev => ([...prev, timeSlots]))
+
+  }
+
   useEffect(()=>{
     fetchDocInfo()
   },[doctors,docId])
+
+  useEffect(()=>{
+    getAvailableSolts()
+  },[docInfo])
+
+  useEffect(()=>{
+    console.log(docSlots)
+  },[docSlots])
 
   return docInfo && (
     <div>
@@ -48,8 +110,26 @@ const Appointment = () => {
           </p>
         </div>
       </div>
+
+      {/* Booking Slots */}
+      <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
+        <p>Booking Slots</p>
+        <div>
+          {
+            docSlots.length && docSlots.map((item, index)=>(
+<div key={index}>
+  <p>{item[0] && daysOfWeek[item[0].datetime.getDay()]}</p>
+  <p>{item[0] && item[0].datetime.getDate()}</p>
+</div>
+            ))
+          }
+        </div>
+
+      </div>
     </div>
   )
+
+  }
 }
 
 export default Appointment
