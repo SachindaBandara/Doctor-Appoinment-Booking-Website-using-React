@@ -38,7 +38,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-xl my-4">
+      <div className="text-xl text-center my-10 pt-20">
         <p>
           Why <span className="text-gray-700 font-semibold">Choose Us</span>
         </p>
