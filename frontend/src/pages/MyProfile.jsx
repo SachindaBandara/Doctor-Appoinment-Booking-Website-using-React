@@ -54,7 +54,7 @@ const MyProfile = () => {
       {
         isEdit
         ? <p>
-          <input type="text" />
+          <input onChange={} type="text" />
           <br/>
           <input type="text" />
         </p>
