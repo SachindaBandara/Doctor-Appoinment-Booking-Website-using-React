@@ -11,9 +11,9 @@ const MyAppointments = () => {
       <p className='pb-3 mt-12 font-bold text-zinc-700 '>My Appointments</p>
       <div>
 {doctors.slice(0,3).map((item,index)=>(
-  <div className='grid grid-cols-[1fr_2fr] gap-4 sm:flex sm:gap-6 py-2 border' key={index}>
+  <div className='grid grid-cols-[1fr_2fr] gap-4 sm:flex sm:gap-6 py-2 px-2 border' key={index}>
 <div>
-  <img className='w-32 bg-indigo-50' src={item.image} alt="" />
+  <img className='w-32  bg-indigo-50' src={item.image} alt="" />
 </div>
 <div className='flex-1 text-sm text-zinc-600'>
   <p className='text-neutral-800 font-semibold'>{item.name}</p>
