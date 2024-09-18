@@ -13,7 +13,7 @@ const Footer = () => {
 
         {/* Center section */}
          <div className='mt-5'>
-            <p className='text-lg font-medium mb-5'>COMPANY</p>
+            <p className='text-base font-medium mb-5'>COMPANY</p>
             <ul className='flex flex-col gap-2 text-gray-600'>
                 <li>Home</li>
                 <li>About</li>
@@ -24,7 +24,7 @@ const Footer = () => {
 
         {/* Right section */}
             <div className='mt-5'>
-                <p className='text-lg font-medium mb-5'>GET IN TOUCH</p>
+                <p className='text-base font-medium mb-5'>GET IN TOUCH</p>
                 <ul className='flex flex-col gap-2 text-gray-600'>
                     <li>Tel   : +94 77 587 9966</li>
                     <li>Email : medicalcare@gmail.com</li>
