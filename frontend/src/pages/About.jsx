@@ -10,7 +10,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="my-10 flex flex-col md:flex-row gap-12">
+      <div className="my-10 flex flex-col justify-center md:flex-row gap-12">
         <img
           className="w-full md:max-w-[360px]"
           src={assets.about_image}

@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Left section */}
         <div className='mt-[-20px]'>
             <img className='mb-5 w-[220px]' src={assets.logo} alt="" />
-            <p className='w-full md:w-2/3 text-gray-600 leading-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ducimus aliquid unde ipsam animi quidem debitis accusamus rem voluptatum cumque porro autem cum temporibus, veritatis, pariatur ea minima consequuntur aut!</p>
+            <p className='w-full md:w-2/3 text-gray-600 leading-6'>We simplify the process of finding and scheduling appointments with trusted healthcare professionals. Our platform connects you with a comprehensive list of specialists, making it easy to browse, select, and book appointments at your convenience.</p>
         </div>
 
         {/* Center section */}
@@ -28,6 +28,7 @@ const Footer = () => {
                 <ul className='flex flex-col gap-2 text-gray-600'>
                     <li>Tel   : +94 77 587 9966</li>
                     <li>Email : medicalcare@gmail.com</li>
+                    <li>Address : 777/A, Baththaramulla</li>
                 </ul>
             </div>
       </div>

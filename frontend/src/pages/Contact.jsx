@@ -19,7 +19,7 @@ const Contact = () => {
 
         <div className="flex flex-col justify-center items-start gap-5">
           <p className="font-semibold text-lg text-gray-600">Our Office</p>
-          <p className="text-gray-500"><span className="font-medium">Address</span> : 777/A, Baththaramulla, Kottawa</p>
+          <p className="text-gray-500"><span className="font-medium">Address</span> : 777/A, Baththaramulla</p>
           <p className="text-gray-500"><span className="font-medium">Tel</span> : +94 77 587 9966</p>
           <p className="text-gray-500"><span className="font-medium">Email</span> : medicalcare@gmail.com</p>
           <p className="font-semibold text-lg text-gray-600">Careers at MEDICAL CARE</p>
