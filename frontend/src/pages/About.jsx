@@ -4,9 +4,9 @@ import { assets } from "../assets/assets";
 const About = () => {
   return (
     <div>
-      <div className="text-center text-2xl pt-10 text-gray-500">
+      <div className="text-center text-4xl font-medium pt-10 text-gray-500">
         <p>
-          About <span className="text-gray-700 font-medium">Us</span>
+          About <span className="text-gray-700 font-semibold">Us</span>
         </p>
       </div>
 
@@ -38,7 +38,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-xl text-center my-10 pt-20">
+      <div className="text-4xl font-medium text-center text-gray-500 my-10 pt-20">
         <p>
           Why <span className="text-gray-700 font-semibold">Choose Us</span>
         </p>
@@ -46,15 +46,15 @@ const About = () => {
 
       <div className="flex flex-col md:flex-row mb-20">
         <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
-          <b>Efficient</b>
+          <p className="text-xl font-bold">Efficient</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, praesentium alias tenetur totam tempora cumque cupiditate nihil dicta voluptates blanditiis, dolores aut inventore fugit nobis debitis facilis delectus molestiae accusamus?</p>
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
-          <b>Convenience</b>
+          <p className="text-xl font-bold">Convenience</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, soluta doloremque quo vitae impedit culpa? Commodi quas minus ipsum magnam ad corrupti laudantium molestiae sunt fuga natus non, corporis odit?</p>
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
-          <b>Personalization</b>
+          <p className="text-xl font-bold">Personalization</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit esse similique, voluptas labore beatae ducimus dolorem. Quaerat illo eveniet quibusdam totam iste, consectetur molestiae similique illum molestias, sunt magni distinctio!</p>
         </div>
       </div>

@@ -100,11 +100,11 @@ const Appointment = () => {
 
           <div className="flex-1 border border-gray-400 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
             {/* Doctor Name, degree, experience */}
-            <p className="flex items-center gap-2 text-2xl font-medium text-gray-900">
+            <p className="flex items-center gap-2 text-2xl font-semibold text-gray-900">
               {docInfo.name}
               <img className="w-5" src={assets.verified_icon} alt="" />
             </p>
-            <div className="flex items-center gap-2 text-sm mt-1 text-gray-600">
+            <div className="flex items-center gap-2 text-sm font-medium mt-1 text-gray-600">
               <p>
                 {docInfo.degree} - {docInfo.speciality}
               </p>
@@ -123,7 +123,7 @@ const Appointment = () => {
                 {docInfo.about}
               </p>
             </div>
-            <p className="text-gray-500 font-medium mt-4">
+            <p className="text-gray-500 font-semibold mt-4">
               Appointment Fee:{" "}
               <span className="text-gray-600">
                 {currencySymbol}
@@ -169,7 +169,7 @@ const Appointment = () => {
                 </p>
               ))}
           </div>
-          <button className="bg-primary text-white text-sm font-light px-14 py-3 rounded-full my-6">
+          <button className="bg-primary text-white text-sm font-medium px-14 py-3 rounded-full my-6 hover:font-semibold hover:scale-105 transition-all duration-300">
             Book an appointment
           </button>
         </div>

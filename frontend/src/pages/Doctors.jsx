@@ -11,21 +11,21 @@ const Doctors = () => {
   const navigate = useNavigate();
   const { doctors } = useContext(AppContext);
 
-const applyFilter = () => {
-  if(speciality){
-    setFilterDoc(doctors.filter(doc => doc.speciality === speciality))
-  } else{
-    setFilterDoc(doctors)
+  const applyFilter = () => {
+    if(speciality){
+      setFilterDoc(doctors.filter(doc => doc.speciality === speciality))
+    } else{
+      setFilterDoc(doctors)
+    }
   }
-}
 
-useEffect( () => {
-applyFilter()
-}, [doctors,speciality])
+  useEffect( () => {
+      applyFilter()
+  }, [doctors,speciality])
 
   return (
     <div>
-      <p className='text-gray-600'>Browse through the doctors specialist.</p>
+      <p className='text-gray-600 font-medium'>Explore our specialists' directory of doctors.</p>
       <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
         <button className={`py-1 px-3 border rounded text-sm transition-all sm:hidden ${showFilter ? 'bg-primary text-white' : ''}`} onClick={()=>setShowFilter(prev => !prev)}>Filter</button>
         <div className={`flex-col gap-4 text-sm text-gray-600 ${showFilter ? 'flex' : 'hidden sm:flex'}`}>
@@ -46,8 +46,8 @@ applyFilter()
                             <p className='w-2 h-2 bg-green-500 rounded-full'></p>
                             <p>Available</p>
                         </div>
-                        <p className='text-gray-900 text-lg font-medium'>{item.name}</p>
-                        <p className='text-gray-500 text-sm'>{item.speciality}</p>
+                        <p className='text-gray-900 text-lg font-semibold'>{item.name}</p>
+                        <p className='text-gray-500 text-sm font-medium'>{item.speciality}</p>
                     </div>
                 </div>
               ))
