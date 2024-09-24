@@ -5,11 +5,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 const NavBar = () => {
   const navigate = useNavigate();
 
+  // State to toggle mobile menu visibility
   const [showMenu, setShowMenu] = useState(false);
+  // State to manage user login token (true if user is logged in)
   const [token, setToken] = useState(true);
 
   return (
-    <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400" >
+    <div className=" bg-white flex items-center justify-between text-sm py-5 mb-5 ">
       <img
         onClick={() => navigate("/")}
         className="w-[230px] cursor-pointer"
@@ -17,7 +19,7 @@ const NavBar = () => {
         alt="logo"
       />
 
-      <ul className="hidden md:flex items-start gap-5 font-semibold mt-8">
+      <ul className="hidden md:flex items-start gap-10 font-semibold mt-8">
         <NavLink to="/">
           <li className="py-1">HOME</li>
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
@@ -100,32 +102,16 @@ const NavBar = () => {
             />
           </div>
           <ul className="flex flex-col items-center gap-4 mt-5 px-5 text-lg font-medium">
-            <NavLink
-              
-              onClick={() => setShowMenu(false)}
-              to="/"
-            >
+            <NavLink onClick={() => setShowMenu(false)} to="/">
               <p className="px-4 py-2 rounded inline-block">Home</p>
             </NavLink>
-            <NavLink
-              
-              onClick={() => setShowMenu(false)}
-              to="/doctors"
-            >
+            <NavLink onClick={() => setShowMenu(false)} to="/doctors">
               <p className="px-4 py-2 rounded inline-block">Doctors</p>
             </NavLink>
-            <NavLink
-              
-              onClick={() => setShowMenu(false)}
-              to="/about"
-            >
+            <NavLink onClick={() => setShowMenu(false)} to="/about">
               <p className="px-4 py-2 rounded inline-block">About</p>
             </NavLink>
-            <NavLink
-              
-              onClick={() => setShowMenu(false)}
-              to="/contact"
-            >
+            <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded inline-block">Contact</p>
             </NavLink>
           </ul>
