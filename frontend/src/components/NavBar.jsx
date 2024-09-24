@@ -11,7 +11,7 @@ const NavBar = () => {
   const [token, setToken] = useState(true);
 
   return (
-    <div className=" bg-white flex items-center justify-between text-sm py-5 mb-5 ">
+    <div className=" bg-white flex items-center justify-between text-sm py-5 mb-5 border-b border-gray-300">
       <img
         onClick={() => navigate("/")}
         className="w-[230px] cursor-pointer"
