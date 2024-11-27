@@ -22,14 +22,27 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/healthcare-webapp.git
-   cd healthcare-webapp
-
+    git clone https://github.com/SachindaBandara/Doctor-Appoinment-Booking-Website-using-React.git
+    cd frontend
+   
 2. **Install Dependencies:**
    ```bash
-   npm install
+    npm install
 
-3.**Run the Application:**
+3. **Run the Application:**
    ```bash
-   npm run dev
+    npm run dev
+
+## Usage 🚀
+1. Open your browser and navigate to `http://localhost:5173`
+
+2. Browse through the available specialists and their schedules.
+
+3. Book an appointment by selecting a suitable date and time.
+
+##
+<div align="center">
+  <h2>🤝Happy coding!💻</h2>
+</div>
+
 
