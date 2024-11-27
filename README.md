@@ -1,4 +1,4 @@
-# Patient Healthcare Web Application
+# 👨‍⚕️👩‍⚕️ Patient Healthcare Web Application
 
 ## Overview
 This project is a user-centric web application designed using React.js and Tailwind CSS to enhance patient healthcare experiences. It features intuitive browsing and booking capabilities for medical appointments.
@@ -41,6 +41,7 @@ To set up the project locally, follow these steps:
 3. Book an appointment by selecting a suitable date and time.
 
 ##
+
 <div align="center">
   <h2>🤝Happy coding!💻</h2>
 </div>
